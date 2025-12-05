@@ -1,0 +1,32 @@
+# Server configuration
+server:
+  port: 8081
+
+# Spring main config
+spring:
+  profiles:
+    active: dev
+  application:
+    name: car-service
+  main:
+    allow-bean-definition-overriding: true
+
+# Logging levels
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+    org.hibernate: ERROR
+
+# Swagger documentation
+springdoc:
+  api-docs:
+    enabled: true
+    path: /rest-api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui
+    # Désactiver le chargement de la configuration à distance
+    config-url: /rest-api-docs/swagger-config
+    url: /rest-api-docs
+
